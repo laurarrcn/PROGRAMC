@@ -1,1 +1,77 @@
+/*
+ALGORITMO: Lógica de porcentagem?
+Escrever um algoritmo em C que leia de uma (1) mercadoria:
+  -> Preço: R$              - float
+  -> Quantidade: Unidade    - int
+  -> Reajuste (Desconto: %) - float
+exbir na tela (Objetivos):
+Total a pagar (sem desconto) - TSD: R$ - float
+Total a pagar (com desconto) - TCD: R$ - float
+*/
+#include <stdio.h>
 
+// ALGORITMO: ENTRADA (Dados do usuário) + ULA + SAÍDA (Objetivos)
+int main(void) {
+  float preco, reajuste, TSD, TCD;
+  int quantidade;
+  printf("Dados de uma (1) mercadoria: \n");
+  printf("Preço: R$ "); scanf("%f", &preco);
+  printf("Quantidade (Unid.): "); scanf("%i", &quantidade);
+  printf("Reajuste (%%): "); scanf("%f", &reajuste);
+  // PROCESASMENTO:
+  TSD = preco * quantidade;
+  // TCD = TSD - reajuste / 100 * TSD;
+  TCD = TSD * (1 - reajuste / 100);
+  // SAÍDA
+  printf("Total a pagar (sem desconto): R$ %.2f\n", TSD);
+  printf("Total a pagar (com desconto de %.2f%%): R$ %.2f\n", reajuste, TCD);
+  return 0;
+}
+---------------------------------------------------------------------------------------------
+/*
+EXEMPLO 6: Méedia semestral da UVV
+Dados de entrada:
+-> Nota do 1º BIM [0-10]: B1
+-> Nota do 2º BIM [0-10]: B2
+*/
+
+#include <stdio.h>
+
+int main(void) {
+float B1, B2; 
+  printf("Nota do 1º Bimestre [0-10]");
+    scanf("%f", &B1);
+    printf("Nota do 2º Bimestre [0-10]");
+    scanf("%f", &B2);
+
+  printf("Média Semestral: %.1f\n", (B1 + B2) / 2);
+//return 0;
+}
+--------------------------------------------------------------------------------------------
+/*
+EXEMPLO 5:
+Dados de entrada:
+Medida da Cintura (em cm) MC
+Medida do Quadril (em cm) MQ
+Objetivo: Relação Cintura-Quadril (em %) RCQ
+*/
+
+#include <stdio.h>
+
+// ALGORITIMO: ENTRADA + processamento + saída
+
+int main(void) {
+
+  // ENTRADA: Declaração + Ler (scanf)
+
+  float MC, MQ;
+
+  printf("Entre com sua Medida da Cintura (em cm): ");
+  scanf("%f", &MC);
+  printf("Entre com sua Medida do Quadril (em cm): ");
+  scanf("%f", &MQ);
+
+  printf("Relação Cinura-Quadril: %.1f%%\n", MC / MQ * 100);
+  return 0;
+}
+-------------------------------------------------------------------------------------------
