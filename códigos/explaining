@@ -30,3 +30,26 @@ int main() {
     return 0;
 }
 ---------------------------------------------------------
+FORMAT SPECIFIERS
+%.1 Precisão decimal (quantos números dps da vírgula vai ter)
+%1 minimum field width (com qntos espaços de width vai ser displayed)
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main(){
+     
+     
+     float item1 = 5.75;
+     float item2 = 10.00;
+     float item3 = 100.99;
+     
+     printf("Item 1: $%8.2f\n",item1);
+      printf("Item 2: $%8.2f\n",item2);
+       printf("Item 3: $%8.2f",item3);
+     /* o .2 depois do % é para mostrar apenas x(2) números depois
+     da vírgula.
+     o número antes do ponto é para minimum field width */
+     
+     return 0;
+}
