@@ -1,1 +1,32 @@
+DECLARANDO VARIÁVEIS DE NOME, FLOAT, NÚMERO E LETRA.
+%s para representar uma string
+%d para número
+%c para letra
+%f para float
+\n para pular linha
+printf(""),variável;
 
+#include <stdio.h>
+
+int main() {
+    
+    //This is a comment
+
+   int x; //declarating
+   x = 123; //initialization
+   int y = 321;
+   
+   int age = 18; //inteiro
+   float gpa = 2.05;//floating number  
+   char grade = 'A'; //sigle character
+   char name[] = "Laura"; //array of characters
+   
+   printf("Hello %s\n",name);
+   printf("You are %d years old\n",age);
+   printf("Your avarage grade is %c\n",grade);
+   printf("Your gpa is %f\n",gpa);
+
+
+    return 0;
+}
+---------------------------------------------------------
