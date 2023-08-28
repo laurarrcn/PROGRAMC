@@ -95,4 +95,7 @@ OPERADORES ARITIMÉTICOS
     
     return 0;
 }
+se dividir 5 / 2, o resultado será 2, pq só store int numbers.
+para que isso não ocorra:
+
 
