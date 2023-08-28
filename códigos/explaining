@@ -53,3 +53,21 @@ int main(){
      
      return 0;
 }
+
+--------------------------------------------------------------
+CONSTANT
+fixed value that cannot be altered by the program during its execution
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main(){
+     
+     //const is a value that cannot be changed by the program
+     const float PI = 3.14159;
+      //pi = 420.69 se alguém tentar declarar outro número, vai dar erro.
+     
+     printf("%f", PI);
+     
+     return 0;
+}
