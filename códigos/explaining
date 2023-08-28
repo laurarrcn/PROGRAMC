@@ -1,6 +1,6 @@
 DECLARANDO VARIÁVEIS DE NOME, FLOAT, NÚMERO E LETRA.
 %s para representar uma string
-%d para número
+%d para número inteiro
 %c para letra
 %f para float
 \n para pular linha
