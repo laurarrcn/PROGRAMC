@@ -71,3 +71,28 @@ int main(){
      
      return 0;
 }
+
+-----------------------------------------------------------------
+OPERADORES ARITIMÉTICOS
++ adição
+- subtração
+* multiplicação
+/ divisão
+% modulus
+++ increment
+-- decrement
+
+   #include <stdio.h>
+
+   int main(){
+    
+    int x = 5;
+    int y = 2;
+    
+    int z = x * y;
+//trocar o operador para diferentes resultados
+    printf("%d",z);
+    
+    return 0;
+}
+
