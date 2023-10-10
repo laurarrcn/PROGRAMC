@@ -1,0 +1,108 @@
+explaining how to use ++, --, +=, -=, etc.
+
+#include <stdio.h>
+
+
+int main()
+{
+    int dado = 10;
+
+    dado++;
+    printf("Dado depois da soma ++ : %d \n", dado);
+
+    dado--;
+    printf("Dado depois da subtração -- : %d \n", dado),
+
+    dado+=3;
+    printf("Dado depois de somar 3: %d \n", dado);
+
+    dado-=2;
+    printf("Dado depois de subtrair 2: %d \n", dado);
+
+    dado*=10;
+    printf("Dado depois de multiplicar 10: %d", dado);
+
+       return 0;
+}
+
+-----------------------------------------------------------
+explaining cálculo em C
+
+#include <stdio.h>
+
+
+int main()
+{
+ int A, B, soma, subt, mult, divs;
+
+ printf("Digite um valor para A:  \n", A);
+ scanf("%d", &A);
+
+ printf("Digite um valor para B: \n", B);
+scanf("%d", &B);
+
+soma = A + B;
+subt = A - B;
+mult = A * B;
+divs = A / B;
+
+printf("Resultados: \n");
+printf("Soma: %d \n", soma);
+printf("Subtracao: %d \n", subt);
+printf("Multiplicacao: %d \n", mult);
+printf("Divisao: %d \n", divs);
+
+    return 0;
+}
+
+---------------------------------------------------------
+explaining switch-case
+
+#include <stdio.h>
+
+
+int main()
+{
+int d;
+
+  printf("insira um valor de 1 a 7 \n");
+  scanf("%d", &d);
+
+  switch(d){
+      
+  case 1:
+      printf("Domingo \n");
+      break;
+      
+  case 2:
+    printf("Segunda \n");
+  break;
+  
+  case 3:
+    printf("Terca \n");
+    break;
+    
+    case 4:
+    printf("Quarta \n");
+    break;
+    
+    case 5:
+        printf("Quinta \n");
+        break;
+        
+        case 6:
+            printf("Sexta \n");
+        break;
+        
+        case 7:
+            printf("Sabado \n");
+        break;
+        
+        default:
+            printf("Valor invalido");
+            break;
+  }
+
+    return 0;
+}
+
