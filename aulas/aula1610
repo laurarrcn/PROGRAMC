@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+#define SIZE 100
+int main(void){
+  char nome[SIZE];
+  int Tamanho;
+  printf("Palavra qualquer:");
+  scanf("\n%[^\n]", nome);
+  Tamanho = strlen(nome);
+  printf("palavra: %s tem tamanho %i. \n", nome, Tamanho);
+  return 0;
+}
+------------------------------------------------------
