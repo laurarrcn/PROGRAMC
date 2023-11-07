@@ -1,0 +1,183 @@
+USERS INPUT
+
+#include <stdio.h>
+
+
+int main()
+{
+
+int age; //declarando a variável 
+printf("Enter your age: ");
+scanf("%d", &age); //scanf o input do user (& serve para "alocar" a variável em um endereço de memoria)
+printf("You are %d years old", age);
+}
+-------------------------------------------------------
+INPUT DE STRING LENDO APENAS 1 PALAVRA
+#include <stdio.h>
+
+
+int main()
+{
+
+char name[20];
+printf("Type your name here: ");
+scanf("%s", name);//quando for input de STRING não precisa de "&"
+printf("your name is: %s", name); //SO VAI LER 1 PALAVRA
+}
+--------------------------------------------------------
+INPUT DE STRING LENDO MAIS DE UMA PALAVRA
+//FGETS APENAS PARA STRING, É UM SCANF MAS DIFERENTE
+#include <stdio.h>
+
+
+int main()
+{
+
+char name[20];
+printf("Type your name here: ");
+fgets(name, 20, stdin); //FGETS+VARIAVEL+TAM. VARIAVEL+ STDIN
+printf("Your name is: %s ", name);
+}
+---------------------------------------------------------
+INPUT + OPERAÇÕES 
+int main()
+{
+    int NUM1;
+    int NUM2;
+
+    printf("Enter your first number: ");
+    scanf("%d", &NUM1);
+    printf("Enter your second number: ");
+    scanf("%d", &NUM2);
+
+    printf("ANSWER: %d", NUM1 + NUM2);
+}
+-----------------------------------------------------
+VARIOS INPUTS E FRASES (MAD LIBS GAME)
+
+#include <stdio.h>
+
+
+int main()
+{
+   char color[20];
+   char pluralNoun[20];
+   char celebrityFirst[20];
+   char celebrityLast[20];
+
+   printf("Enter a color: ");
+   scanf("%s", color);
+   printf("Enter a Plural Noun: ");
+   scanf("%s", pluralNoun);
+   printf("Enter a celebrity: ");
+   scanf("%s %s", celebrityFirst, celebrityLast);
+
+   printf("Roses are %s \n", color);
+   printf("%s are blue \n", pluralNoun);
+   printf("I love %s %s", celebrityFirst, celebrityLast);
+}
+-----------------------------------------------------------------
+FUNÇÕES
+
+#include <stdio.h>
+
+
+int main()
+{
+   sayHi("Mike");//chama a função e add um name[] comom referido na função sayHi();
+return 0;
+}
+
+void sayHi(char name[]){  //void(retorno) sayHi(nome da função) (char name[]) "Parâmetro"
+printf("Hello %s\n ", name);
+}
+--------------------------------------------------------------
+FUNÇÔES COM + PARÂMETROS
+
+#include <stdio.h>
+
+
+int main()
+{
+   sayHi("Mike", 18);
+return 0;
+}
+void sayHi(char name[], int age){
+printf("Hello %s, you are %d\n ", name, age);
+}
+---------------------------------------------------------------
+FUNÇÕES COM RETURN STATEMENTS
+
+#include <stdio.h>
+
+//p esse tipo de função ela deve estar sempre acima da Main
+
+double cube(double num){ //double cube(não é void pq vai retornar alguma coisa) double num é a variavel
+double result = num * num * num;
+return result;
+}
+
+int main()
+{
+ printf("The result is: %f", cube(2));
+}
+------------------------------------------------------------------
+IF STATEMENTS
+IF NUMBER 1 IS GRATER THAN NUMBER 2 THEN RETURN NUMBER 1, IF IT ISN'T, THEN RETURN NUMBER 2
+
+#include <stdio.h>
+
+int max(int num1, int num2){ //TIPO DE VARIAVEL + VARIAVEL (VARIAVEIS)
+int result;
+if(num1>num2){ //CONDIÇÃO
+    result = num1;
+}
+
+else{
+    result = num2;
+}
+
+return result;
+}
+
+int main()
+{
+  printf("%d", max(10, 5)); //NOME DA FUNÇÃO + PASSANDO PARÂMETROS
+  return 0;
+}
+-----------------------------------------------------------------------
+IF STATEMENTS COM 3 VARIAVEIS
+
+#include <stdio.h>
+
+int max(int num1, int num2, int num3){
+int result;
+if(num1 >= num2 && num1 >= num3){
+    result = num1;
+}else if(num2 >= num1 && num2 >= num3){
+result = num2;
+}
+
+else{
+    result = num3;
+}
+
+return result;
+}
+
+int main()
+{
+  printf("%d", max(100, 60, 30));
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
