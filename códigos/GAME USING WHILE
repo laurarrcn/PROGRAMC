@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+int secretNumber;
+int guess;
+
+printf("Enter a secret number: ");
+scanf("%d", &secretNumber);
+
+while(guess != secretNumber ){
+    printf("Enter a number: ");
+    scanf("%d", &guess);
+}
+printf("You guessed the secret number");
+  return 0;
+}
+
+
+
