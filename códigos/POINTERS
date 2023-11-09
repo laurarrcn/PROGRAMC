@@ -1,3 +1,6 @@
+MEMORY ADRESS
+%p SHOW THE MEMORY ADRESS WHERE THE VARIABLES ARE STORED
+THINK OF POINTERS AS A TYPE OF DATA!!!!!!!!!!!!!!
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,6 +17,7 @@ printf("age : %p\n gpa: %p \n grade: %p", &age, &gpa, &grade);
 
   return 0;
 }
+==============================================================
 
 
 
