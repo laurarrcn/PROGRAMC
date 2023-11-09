@@ -6,6 +6,7 @@ BUTTT WHEN WE WANNA ADD IT TO A STRING WE NEED TO ADD A strcpy BEFORE AND PUT TH
 THAT WOULD BE LIKE strcpy(student1.name, "Laura");
 
 
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -19,7 +20,7 @@ int age;
 double gpa;
 
 
-}; //yes even tho it has the curly bracket we have to put a semicolon to end a struct 
+}; //yes even tho it has the curly bracket we have to put a semicolon to end a struct
 int main()
 {
 
@@ -33,9 +34,18 @@ int main()
    so like strcpy(student1 is the instance and name is the adress of the atribute, and "Laura" is the info we want to add to this instance.
 */
 
-printf("%f", student1.gpa);
+printf("Your grade is: %f\n", student1.gpa);
+
+printf("Your age is: %d\n", student1.age);
+
+printf("Your name is: %s\n", student1.name);
+
+printf("Your major is: %s\n", student1.major);
   return 0;
 }
+
+
+
 
 
 
