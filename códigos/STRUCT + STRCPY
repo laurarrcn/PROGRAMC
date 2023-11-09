@@ -7,6 +7,7 @@ THAT WOULD BE LIKE strcpy(student1.name, "Laura");
 
 
 
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -34,15 +35,32 @@ int main()
    so like strcpy(student1 is the instance and name is the adress of the atribute, and "Laura" is the info we want to add to this instance.
 */
 
+struct Student student2;
+   student2.age = 18;
+   student2.gpa = 4.2;
+   strcpy(student2.name, "Daniel");
+      strcpy(student2.major, "Law");
+
 printf("Your grade is: %f\n", student1.gpa);
 
 printf("Your age is: %d\n", student1.age);
 
 printf("Your name is: %s\n", student1.name);
 
-printf("Your major is: %s\n", student1.major);
+printf("Your major is: %s\n \n \n", student1.major);
+
+printf("Your grade is: %f\n", student2.gpa);
+
+printf("Your age is: %d\n", student2.age);
+
+printf("Your name is: %s\n", student2.name);
+
+printf("Your major is: %s\n", student2.major);
   return 0;
 }
+
+
+
 
 
 
