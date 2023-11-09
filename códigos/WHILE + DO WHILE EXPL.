@@ -1,0 +1,46 @@
+WHILE :
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+
+int index = 1;
+
+while(index <= 5){
+    printf("%d\n", index);
+    index++;
+}
+
+  return 0;
+}
+
+=================================================================================
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+
+int index = 6;
+/*
+DO does whatever comes in the do{} first than checking the while parameters even tho it doesnt assign to the specifications of the while loop
+so basically anytime you don´t wanna be checking the conditions of the while loop first we use a do-while loop
+*/
+do{
+    printf("%d\n", index);
+    index++;
+}while(index <= 5);
+
+  return 0;
+}
+
+
+
+
+
