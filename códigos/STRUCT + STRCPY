@@ -1,0 +1,41 @@
+STRUCT IS A DATA STRUCTURE WHERE WE CAN STORE GROUP OF DATA TYPES. YES VERY SIMILAR TO A CLASS IN JAVA. FIRST WE DECLARE THE ATRIBUTES AS I DID IN THE CODE BELOW SO
+CHAR NAME, CHAR MAJOR ETC BASICALLY EVERYTHING OUR "OBJECT" WILL HAVE AND INSIDE OF THE MAIN WE WILL CREATE AN INSTANCE OF THAT STRUCT ("class") USING FOR EXAMPLE
+struct Student student1;
+AND THEN ADD THE ATRIBUTES LIKE student1.age = 22;
+BUTTT WHEN WE WANNA ADD IT TO A STRING WE NEED TO ADD A strcpy BEFORE AND PUT THE OBJECTS NAME + ATRIBUTES INSIDE OF A PARENTHESIS !!!
+THAT WOULD BE LIKE strcpy(student1.name, "Laura");
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+// struct sintaxe: struct + name of the strcut with capital letter
+struct Student{
+
+char name[50];
+char major[50];
+int age;
+double gpa;
+
+
+}; //yes even tho it has the curly bracket we have to put a semicolon to end a struct 
+int main()
+{
+
+   struct Student student1;
+   student1.age = 22;
+   student1.gpa = 3.2;
+   strcpy(student1.name, "Laura");
+      strcpy(student1.major, "Computer Science");
+   /*
+   first you need to add strcpy then (instance + adress, "info you wanna add")
+   so like strcpy(student1 is the instance and name is the adress of the atribute, and "Laura" is the info we want to add to this instance.
+*/
+
+printf("%f", student1.gpa);
+  return 0;
+}
+
+
+
