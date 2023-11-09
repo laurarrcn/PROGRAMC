@@ -1,0 +1,42 @@
+
+#include <stdio.h>
+
+
+int main()
+{
+
+    char grade;
+
+printf("Enter your grade on the test: ");
+scanf(" %c", &grade);
+
+switch(grade){
+case 'A':
+    printf("Congrats You did great on test!!");
+    break;
+
+case 'B':
+    printf("Okay you did alright on the test!");
+    break;
+
+case 'C':
+    printf("You did poorly on the test");
+    break;
+
+case 'D':
+    printf("Did you even study for your test");
+    break;
+
+case 'F':
+    printf("You failed :) ");
+    break;
+
+default:
+    printf(" EEROR INVALID GRADE");
+}
+
+  return 0;
+}
+
+
+
