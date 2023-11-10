@@ -31,6 +31,8 @@ if(strcmp(p1, p2) == 0){
 
 ===================================
 USANDO STRLEN
+//FGETS+VARIAVEL+TAM. VARIAVEL+ STDIN
+
 
 #include <stdio.h>
 #include <string.h>
@@ -39,7 +41,7 @@ int main()
   char palavra[60] = "Eu ja nao aguento mais";
   
   printf("Digite algo: ");
-  fgets(palavra, 15, stdin);
+  fgets(palavra, 15, stdin); //FGETS+VARIAVEL+TAM. VARIAVEL+ STDIN
   
   printf("Tamanho: %d\n", strlen(palavra));
     return 0;
