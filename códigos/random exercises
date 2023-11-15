@@ -71,7 +71,44 @@ puts(s1);
 
   return 0;
 }
+-------------------------------------------------------------------------
+USANDO STRLEN
 
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+#define SIZE 100
+
+
+
+int main()
+{
+setlocale(LC_ALL, "Portuguese");
+
+char palavra[SIZE];
+int i;
+
+
+printf("Digite uma palavra: \n");
+//fgets(palavra, 100, stdin);
+//scanf("%99[^\n]s", palavra);
+gets(palavra);
+
+i = strlen(palavra);
+
+
+printf("Resultado: %d", i);
+
+  return 0;
+}
+
+
+
+
+
+-----------------------------------------------------------
 
 
 
