@@ -43,6 +43,37 @@ puts(origem);
 
   return 0;
 }
+----------------------------------------------------------------
+USANDO STRCAT
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+
+#define SIZE 50
+
+int main()
+{
+setlocale(LC_ALL,"Portuguese");
+
+char s1[SIZE] = {"Lógica"};
+char s2[SIZE] = {" De programação"};
+
+printf("Antes de strcat: \n");
+printf("Str1: %s \n", s1);
+printf("Str2: %s \n", s2);
+
+strcat(s1, s2);
+
+printf("Depois do strcat: \n");
+puts(s1);
+
+  return 0;
+}
+
+
+
 
 
 
