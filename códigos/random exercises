@@ -1,0 +1,20 @@
+USANDO O SCANF DE MANEIRA CORRETA, DE FORMA QUE ELE TAMBÉM LEIA O ESPAÇO " " ENTRE AS PALAVRAS.
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+
+char string[100];
+
+printf("Digite seu nome: ");
+scanf("%99[^\n]s", string);
+//scanf("%tam.array[^\n]s", array);
+
+printf("Resultado: %s", string);
+  return 0;
+}
+---------------------------------------------------------
+
+
