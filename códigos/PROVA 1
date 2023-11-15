@@ -1,0 +1,101 @@
+#include <stdio.h>
+
+int main() {
+    int notas[100]; // Array para armazenar as notas dos clientes
+    int opcao, quantidade_clientes = 0;
+    int negativo = 0, neutro = 0, positivo = 0;
+
+    do {
+        printf("\nMenu de Opções:\n");
+        printf("[1]: Cadastrar nota\n");
+        printf("[0]: Sair\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 1:
+                if (quantidade_clientes < 100) {
+                    int nota;
+                    printf("Digite a nota (entre 1 e 5): ");
+                    scanf("%d", &nota);
+
+                    // Verificando e contando os tipos de notas
+                    if (nota == 1 || nota == 2) {
+                        negativo++;
+                    } else if (nota == 3) {
+                        neutro++;
+                    } else if (nota == 4 || nota == 5) {
+                        positivo++;
+                    }
+
+                    notas[quantidade_clientes] = nota; // Armazena a nota no array
+                    quantidade_clientes++;
+                } else {
+                    printf("Limite de clientes atingido.\n");
+                }
+                break;
+            case 0:
+                break;
+            default:
+                printf("Opção inválida. Por favor, escolha novamente.\n");
+        }
+    } while (opcao != 0);
+
+    printf("\n--- Resultado da Pesquisa de Satisfação ---\n");
+    printf("Clientes que deram notas negativas (1 ou 2): %d\n", negativo);
+    printf("Clientes que deram nota neutra (3): %d\n", neutro);
+    printf("Clientes que deram notas positivas (4 ou 5): %d\n", positivo);
+
+    // Cálculo da porcentagem
+    float total_clientes = negativo + neutro + positivo;
+    float porcentagem_negativo = (negativo / total_clientes) * 100;
+    float porcentagem_neutro = (neutro / total_clientes) * 100;
+    float porcentagem_positivo = (positivo / total_clientes) * 100;
+
+    printf("\nPorcentagem de clientes negativos: %.2f%%\n", porcentagem_negativo);
+    printf("Porcentagem de clientes neutros: %.2f%%\n", porcentagem_neutro);
+    printf("Porcentagem de clientes positivos: %.2f%%\n", porcentagem_positivo);
+
+    return 0;
+}
+-------------------------------------------------------------------
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define TAMANHO_VETOR 1000
+
+int main() {
+    int vetor[TAMANHO_VETOR];
+    int i;
+
+    srand(time(NULL)); // Inicializa a semente do gerador de números aleatórios
+
+    // Preenche o vetor com valores aleatórios entre 10 e 9999
+    for (i = 0; i < TAMANHO_VETOR; i++) {
+        vetor[i] = rand() % 9989 + 10; // Gera números entre 10 e 9999
+    }
+
+    // Encontra as menores senhas de 2, 3 e 4 dígitos
+    int menor_2_digitos = 10000;
+    int menor_3_digitos = 10000;
+    int menor_4_digitos = 10000;
+
+    for (i = 0; i < TAMANHO_VETOR; i++) {
+        int numero = vetor[i];
+
+        if (numero >= 10 && numero <= 99 && numero < menor_2_digitos) {
+            menor_2_digitos = numero;
+        } else if (numero >= 100 && numero <= 999 && numero < menor_3_digitos) {
+            menor_3_digitos = numero;
+        } else if (numero >= 1000 && numero <= 9999 && numero < menor_4_digitos) {
+            menor_4_digitos = numero;
+        }
+    }
+
+    printf("A menor senha de 2 dígitos: %d\n", menor_2_digitos);
+    printf("A menor senha de 3 dígitos: %d\n", menor_3_digitos);
+    printf("A menor senha de 4 dígitos: %d\n", menor_4_digitos);
+
+    return 0;
+}
