@@ -1,3 +1,26 @@
+NOTES
+FUNÇÕES IMPORTANTES:
+STRCPY----
+strcpy(destino, origem);
+para alterar o conteúdo de uma string
+
+STRCAT----
+strcat(destino, origem);
+colar uma string na outra(concatenar)
+
+STRLEN----
+strlen(string);
+mostra o tamanho da string
+
+STRCMP---
+strcmp(string1, string2);
+compara igualdade entre strings
+se é igual = 0
+se é maior >0
+se é menor <0
+----------------------------------------------------------
+STRCMP
+
 RETURNS VALUE:
 IF S1 < S2 WE USE <0
 IF S1 > S2 WE USE >0
