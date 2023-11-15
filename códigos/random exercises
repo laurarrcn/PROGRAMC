@@ -109,6 +109,46 @@ printf("Resultado: %d", i);
 
 
 -----------------------------------------------------------
+USANDO STRCMP
+CHECANDO SE AS STRINGS SÃO IGUAIS
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+#define SIZE 100
+
+
+
+int main()
+{
+setlocale(LC_ALL, "Portuguese");
+
+char str1[SIZE];
+char str2[SIZE];
+int ok;
+
+printf("Digite um nome: \n");
+gets(str1);
+
+printf("Digite outro nome: \n");
+gets(str2);
+
+ok = strcmp(str1, str2);
+
+if(ok == 0){
+    printf("São iguais");
+}
+else {
+    printf("Nomes diferentes");
+}
+
+
+
+  return 0;
+}
+
+
 
 
 
