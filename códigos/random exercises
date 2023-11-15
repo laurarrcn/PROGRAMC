@@ -16,5 +16,35 @@ printf("Resultado: %s", string);
   return 0;
 }
 ---------------------------------------------------------
+USANDO STRCPY
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+#define N 20 //vai ser o tamanho do array
+
+int main()
+{
+setlocale(LC_ALL, "Portuguese");
+
+char origem[N] = {"Olá mundo!"};
+char destino[N]; //ou seja não tem nada em destino
+
+printf("Antes do strcpy: \n");
+puts(origem);
+puts(destino);
+
+strcpy(destino, origem);//passando a string de origem para destino
+
+printf("Agora depois do strcpy: \n");
+puts(destino);
+puts(origem);
+
+  return 0;
+}
+
+
+
 
 
