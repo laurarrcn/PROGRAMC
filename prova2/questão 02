@@ -1,0 +1,46 @@
+#include <string.h>
+#include <stdio.h>
+
+int main()
+{
+    char palavra[50];
+    int i;
+    int primeiraLetra;
+    int ultimaLetra;
+    while(1){
+        printf("Digite uma palavra ou (SAIR) para sair do programa.");
+        scanf("%s", palavra);
+        
+        if(strcmp(palavra, "SAIR") == 0){
+            printf("Você saiu do programa!");
+            break;
+        }
+        int tamanho = strlen(palavra);
+        
+        if(tamanho >= 2){
+            primeiraLetra = palavra[0]; //temos a 1 letra na palavra[0](posicao 0)
+            ultimaLetra = palavra[tamanho - 1];
+            
+            int contagemPrimeira, contagemUltima = 0;
+            
+            
+            for(i = 0; i < tamanho; i++){
+               if( palavra[i] == primeiraLetra){
+                contagemPrimeira++;
+               }
+               if(palavra[i] == ultimaLetra){
+                   contagemUltima++;
+               }
+               printf("a primeira letra %c ocorre %d e a ultima letra %c ocorre %d vezes ma palavra %s",primeiraLetra, contagemPrimeira, ultimaLetra, contagemUltima, palavra);
+             
+            }
+            
+            
+        } else{
+            printf("A palavra é inválida pois não tem 2 letras ou mais");
+        }
+    
+
+    return 0;
+}
+}
