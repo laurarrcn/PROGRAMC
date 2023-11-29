@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <math.h>
+
+int ehPrimo(int numero) {
+    if (numero < 2) {
+        return 0;
+    }
+    if (numero == 2 || numero == 3) {
+        return 1;
+    }
+    for (int i = 2; i <= sqrt(numero); i++) {
+        if (numero % i == 0) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int main() {
+    int opcao, numero;
+
+    do {
+        printf("\nMenu:\n");
+        printf("1: Digitar um número e exibir quantidade de primos\n");
+        printf("0: Sair do programa\n");
+        printf("Escolha a opção: ");
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 1:
+                printf("Digite um número inteiro maior ou igual a 2: ");
+                scanf("%d", &numero);
+
+                if (numero < 2) {
+                    printf("Número inválido. Digite um número maior ou igual a 2.\n");
+                    break;
+                }
+
+                int contPrimos = 0;
+                for (int i = 2; i <= numero; i++) {
+                    if (ehPrimo(i)) {
+                        contPrimos++;
+                    }
+                }
+                printf("Existem %d números primos entre 2 e %d.\n", contPrimos, numero);
+                break;
+
+            case 0:
+                printf("Encerrando o programa. Até logo!\n");
+                break;
+
+            default:
+                printf("Opção inválida. Tente novamente.\n");
+        }
+    } while (opcao != 0);
+
+    return 0;
+}
