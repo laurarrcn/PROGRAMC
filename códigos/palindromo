@@ -1,0 +1,33 @@
+Escrever um programa em C que leia uma string e identifique se esta é um palíndromo. Palíndromo é
+quando uma palavra pode ser lida da esquerda para direita e vice-versa permanecendo a mesma
+palavra: RADAR, ABA, ANILINA, dentre outras.
+
+#include <string.h>
+#include <stdio.h>
+
+int main()
+{
+    char palavra[100];
+    int i, j, tamanho;
+    int palindromo = 1;
+    
+    printf("Digite uma palavra para checar se eh um palindromo: ");
+    scanf("%s", palavra);
+    
+    tamanho = strlen(palavra);
+    
+    for(int i = 0, j = tamanho - 1; i < tamanho ; i++, j--){
+        if(palavra[i]  != palavra[j]){
+           palindromo = 0;
+            break;
+        } 
+    }
+    
+    if(palindromo == 1){
+        printf("a palavra %s eh palindromo", palavra);
+    } else{
+        printf("A palavra nao eh um palindromo");
+    }
+
+    return 0;
+}
