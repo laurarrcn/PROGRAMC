@@ -1,0 +1,13 @@
+como percorrer valores de um array:
+
+int myNumbers[] = {25, 50, 75, 100};
+int i;
+
+for (i = 0; i < 4; i++) {
+  printf("%d\n", myNumbers[i]);
+}
+foram declarados os valores do array myNumbers[], no loop for diz: (int i é = 0; enquanto i for < 4; acrescento +1 em i){
+printf("%d", myNumbers[na posição i];
+como myNumbers está na posição i, ou seja, posição 0, ele executará o loop pois é < que 4 e mostrará a posição 0 do array e depois vai acrescentar +1 a i, fazendo com que ele passe a valer 1.
+agora, com i valendo 1, ainda sendo menor que 4, o printf(mynumbers[i]) mostrará a posição 1 do array e acrescentará +1 a i, que agora vale 2.
+assim sucessivamente.
