@@ -1,0 +1,31 @@
+uma) e exiba cada mensagem com um
+espaço em branco entre todos os caracteres. Pare o programa quando for digitada a palavra “FIM”.
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char mensagem1[100];
+    char mensagem2[100];
+    char mensagem3[100];
+    char resultado[300] = ""; // Inicializa a variável que armazenará as mensagens concatenadas
+
+    printf("Digite a primeira mensagem: ");
+    fgets(mensagem1, 100, stdin);
+
+    printf("Digite a segunda mensagem: ");
+    fgets(mensagem2, 100, stdin);
+
+    printf("Digite a terceira mensagem: ");
+    fgets(mensagem3, 100, stdin);
+
+    strcat(resultado, mensagem1); // Concatena a primeira mensagem
+    strcat(resultado, " "); // Adiciona um espaço entre as mensagens
+    strcat(resultado, mensagem2); // Concatena a segunda mensagem
+    strcat(resultado, " "); // Adiciona um espaço entre as mensagens
+    strcat(resultado, mensagem3); // Concatena a terceira mensagem
+
+    printf("Mensagens concatenadas com espaços entre caracteres: %s\n", resultado);
+
+    return 0;
+}
