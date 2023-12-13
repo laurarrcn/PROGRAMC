@@ -1,0 +1,43 @@
+criar um algoritimo  em C  que preencha um vetor de TAMANHO 10 com senhas:  valores inteiros aleatorios (srand / rand) no intervalo entre [10, 9999]. Após isso, exibir na tela as MENORES senhas por dígitos, conforme a seguir:
+MENOR SENHA DE 2 DIGITOS: XX
+MENOR SENHA DE 3 DIGITOS: XXX
+MENOR SENHA DE 4 DIGITOS: XXXX
+
+feito pelo chatgpt
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define TAMANHO 10
+
+int main() {
+    int vetor[TAMANHO];
+    srand(time(NULL));
+
+    // Preenchendo o vetor com valores aleatórios entre 10 e 9999
+    for (int i = 0; i < TAMANHO; i++) {
+        vetor[i] = rand() % 9989 + 10;
+    }
+
+    // Inicializando as menores senhas por dígitos
+    int menor_2_digitos = 100, menor_3_digitos = 1000, menor_4_digitos = 10000;
+
+    // Encontrando as menores senhas por dígitos
+    for (int i = 0; i < TAMANHO; i++) {
+        if (vetor[i] >= 10 && vetor[i] <= 99 && vetor[i] < menor_2_digitos) {
+            menor_2_digitos = vetor[i];
+        } else if (vetor[i] >= 100 && vetor[i] <= 999 && vetor[i] < menor_3_digitos) {
+            menor_3_digitos = vetor[i];
+        } else if (vetor[i] >= 1000 && vetor[i] <= 9999 && vetor[i] < menor_4_digitos) {
+            menor_4_digitos = vetor[i];
+        }
+    }
+
+    // Exibindo as menores senhas por dígitos
+    printf("MENOR SENHA DE 2 DIGITOS: %02d\n", menor_2_digitos);
+    printf("MENOR SENHA DE 3 DIGITOS: %03d\n", menor_3_digitos);
+    printf("MENOR SENHA DE 4 DIGITOS: %04d\n", menor_4_digitos);
+
+    return 0;
+}
