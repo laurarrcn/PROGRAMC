@@ -1,0 +1,60 @@
+#include <stdio.h>
+
+int main() {
+    int notas[100]; // Array para armazenar as notas dos clientes
+    int opcao, quantidade_clientes = 0;
+    int negativo = 0, neutro = 0, positivo = 0;
+
+    do {
+        printf("\nMenu de Opções:\n");
+        printf("[1]: Cadastrar nota\n");
+        printf("[0]: Sair\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 1:
+                if (quantidade_clientes < 100) {
+                    int nota;
+                    printf("Digite a nota (entre 1 e 5): ");
+                    scanf("%d", &nota);
+
+                    // Verificando e contando os tipos de notas
+                    if (nota == 1 || nota == 2) {
+                        negativo++;
+                    } else if (nota == 3) {
+                        neutro++;
+                    } else if (nota == 4 || nota == 5) {
+                        positivo++;
+                    }
+
+                    notas[quantidade_clientes] = nota; // Armazena a nota no array
+                    quantidade_clientes++;
+                } else {
+                    printf("Limite de clientes atingido.\n");
+                }
+                break;
+            case 0:
+                break;
+            default:
+                printf("Opção inválida. Por favor, escolha novamente.\n");
+        }
+    } while (opcao != 0);
+
+    printf("\n--- Resultado da Pesquisa de Satisfação ---\n");
+    printf("Clientes que deram notas negativas (1 ou 2): %d\n", negativo);
+    printf("Clientes que deram nota neutra (3): %d\n", neutro);
+    printf("Clientes que deram notas positivas (4 ou 5): %d\n", positivo);
+
+    // Cálculo da porcentagem
+    float total_clientes = negativo + neutro + positivo;
+    float porcentagem_negativo = (negativo / total_clientes) * 100;
+    float porcentagem_neutro = (neutro / total_clientes) * 100;
+    float porcentagem_positivo = (positivo / total_clientes) * 100;
+
+    printf("\nPorcentagem de clientes negativos: %.2f%%\n", porcentagem_negativo);
+    printf("Porcentagem de clientes neutros: %.2f%%\n", porcentagem_neutro);
+    printf("Porcentagem de clientes positivos: %.2f%%\n", porcentagem_positivo);
+
+    return 0;
+}
